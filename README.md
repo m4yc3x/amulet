@@ -36,9 +36,6 @@ Each message file contains a `ServiceID` entry, which is crucial for determining
 
 The determination of `MessageID` is slightly more complex. In the absence of `MsgOrder` entries (which is common), the `MessageID` is assigned by sorting the message names alphabetically.
 
-### Tool for Message Sorting
-
-
 ## Packet Structure
 Amulet adheres to the KingsIsle Networking Protocol (KINP) for message framing, which uses a hybrid delimited/length-prefixed approach. Each message begins with a "Start Signal" (`0xF00D`), followed by the length of the message payload and the payload itself. This structure is consistent across both TCP and UDP protocols. For comprehensive packet information, the repository maintained by Joshsora is highly recommended: [Joshsora's libki wiki](https://github.com/Joshsora/libki/wiki/). The findings within have been instrumental in understanding the intricacies of packet handling in KingsIsle games, saving countless hours of research. For redundancy and ease of access, the key information has been summarized below.
 
